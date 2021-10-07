@@ -1,21 +1,20 @@
 <template>
-  <div id="app">
-    <!-- 根路由出口 -->
-    <router-view/>
+  <div class="footer">
+    <p class="statement">Glad to meet you guys.</p>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
-  name: 'App'
+  name: 'AppFooter'
 })
 </script>
 
 <style lang="scss" scoped>
-// @import "~@/styles/variables.scss";
-.text {
-  color: $warning-color;
+.footer {
+  .statement {
+    text-align: center;
+  }
 }
 </style>
