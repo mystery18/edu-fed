@@ -1,4 +1,5 @@
 import Vue from 'vue'
+// 1
 import VueRouter, { RouteConfig } from 'vue-router'
 import Layout from '@/layout/index.vue'
 import store from '@/store'
