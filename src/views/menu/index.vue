@@ -17,7 +17,10 @@
           <el-table-column prop="icon" label="前端图标"> </el-table-column>
           <el-table-column prop="orderNum" label="排序"> </el-table-column>
           <el-table-column label="操作">
-            <template slot-scope="scope">
+            <!-- 子组件中，给slot绑定属性，把scope值传过来 -->
+            <!-- 相当于这里是父组件，子组件中的slot传过来的参数，我们用scope接收了。关键就是我们要怎么去接收传过来的东西 -->
+            <!-- <template slot-scope="scope"> -->
+            <template v-slot="scope">
               <el-button
                 size="mini"
                 @click="handleEdit(scope.row)"
