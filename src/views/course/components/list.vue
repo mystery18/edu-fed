@@ -72,7 +72,7 @@
           label="操作"
           align="center"
         >
-          <template slot-scope="scope">
+          <template v-slot="scope">
             <!-- 点击编辑时，路由跳转编辑的路由，把当前作用域对象.id的值传递过去 键为 courseId -->
             <el-button
               @click="$router.push({
@@ -90,6 +90,7 @@
                 }
               })"
             >内容管理</el-button>
+            <!-- 把课程id作为参数传过去 -->
           </template>
         </el-table-column>
       </el-table>
@@ -157,7 +158,8 @@ export default Vue.extend({
 
     async onStateChange (course: any) {
       course.isStatusLoading = true
-      const { data } = await changeState({
+      // 只是发送一个上/下架的请求
+      await changeState({
         courseId: course.id,
         status: course.status
       })

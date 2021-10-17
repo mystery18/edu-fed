@@ -1,13 +1,14 @@
 <template>
   <div class="resource-list">
     <el-card class="box-card">
+      <!-- 搜索框 = S -->
       <div slot="header" class="clearfix">
         <el-form :inline="true" :model="form" class="demo-form-inline" ref="form">
           <el-form-item label="资源名称" prop="name">
-            <el-input v-model="form.name" placeholder=""></el-input>
+            <el-input v-model="form.name" placeholder="请输入资源名称"></el-input>
           </el-form-item>
           <el-form-item label="资源路径" prop="url">
-            <el-input v-model="form.url" placeholder=""></el-input>
+            <el-input v-model="form.url" placeholder="请输入资源路径"></el-input>
           </el-form-item>
           <el-form-item label="资源分类" prop="categoryId">
             <!-- 记得要把v-model改成对应的数据，不然提交表单的数据会无效 -->
@@ -21,6 +22,7 @@
           </el-form-item>
         </el-form>
       </div>
+      <!-- 搜索框 = E -->
       <div>
         <el-table :data="resources" style="width: 100%" v-loading="isLoading">
           <el-table-column type="index" label="编号"> </el-table-column>
