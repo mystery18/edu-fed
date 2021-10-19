@@ -72,6 +72,7 @@
           label="操作"
           align="center"
         >
+          <!-- 其实我觉得应该是 v-slot:scope -->
           <template v-slot="scope">
             <!-- 点击编辑时，路由跳转编辑的路由，把当前作用域对象.id的值传递过去 键为 courseId -->
             <el-button
