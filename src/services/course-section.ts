@@ -14,3 +14,7 @@ export const getSectionAndLesson = (courseId: string | number) => {
     }
   })
 }
+
+// 这么写也可以。其实好像好一些
+export const requestNameGet = (params: string | number) => request.get('/boss/str/exampleGet', { params: params })
+export const requestNamePost = (params: any) => request.get('/boss/str/examplePost', params)
